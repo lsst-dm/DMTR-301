@@ -1,0 +1,9 @@
+% bibentry template for lsst.bib in https://github.com/lsst/lsst-texmf/blob/master/texmf/bibtex/bib/lsst.bib
+
+@DocuShare{DMTR-301,
+   author = { Gregory Dubois-Felsmann },
+    title = {milestone-dp01},
+     year = 2021,
+    month = Mar,
+   handle = {DMTR-301},
+      url = {https://dmtr-301.lsst.io } }
