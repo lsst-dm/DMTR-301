@@ -18,7 +18,6 @@ endif
 
 $(JOBNAME).pdf: $(DOCNAME).tex meta.tex acronyms.tex
 	xelatex -jobname=$(JOBNAME) $(DOCNAME)
-	bibtex $(JOBNAME)
 	xelatex -jobname=$(JOBNAME) $(DOCNAME)
 	xelatex -jobname=$(JOBNAME) $(DOCNAME)
 	xelatex -jobname=$(JOBNAME) $(DOCNAME)
