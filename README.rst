@@ -7,6 +7,6 @@
 DMTR-301
 ########
 
-milestone-dp01: RSP redeployed on the Interim Data Facility (IDF), ready for DP0.1
+LDM-503-14a: RSP redeployed on the Interim Data Facility (IDF), ready for DP0.1
 
 To regenerate from Jira use the github action "docgen from Jira" on your branch. 
