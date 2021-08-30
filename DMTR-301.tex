@@ -32,7 +32,7 @@
 \title{LDM-503-14a: RSP redeployed on the Interim Data Facility (IDF), ready
 for DP0.1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-06-14 }
+\date{ 2021-08-30 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -498,7 +498,7 @@ Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Ensure that the TAP service internal to the RSP instance is selected.
-~(This should be the default choice.)
+Â~(This should be the default choice.)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -520,13 +520,13 @@ Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Select the TAP ``schema'' for the data to be queried (see test
-parameter). ~
+parameter). Â~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-{\{TAP ``schema'' name for catalog data to be tested\}}⁠~
+{dp01\_dc2\_catalogs}⁠~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -546,13 +546,13 @@ Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Select the catalog table to be queried (see test parameter). ~
+Select the catalog table to be queried (see test parameter). Â~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-{\{TAP ``table'' name for catalog to be queried\}}⁠~
+{object}⁠~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -574,14 +574,14 @@ Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 {\footnotesize
 Enter the sky coordinates of the location to be tested (see test
 parameter) in the ``Spatial'' query-builder element on the left of the
-screen. ~(Note that the test dataset is likely to be of limited extent
+screen. Â~(Note that the test dataset is likely to be of limited extent
 on the sky.) Enter 100 arcseconds as the search radius.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-{\{(ra, dec) tuple for a location covered by the test catalog\}}⁠~
+{(60,-35)}⁠~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -601,7 +601,7 @@ Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Verify that a list of available columns is displayed on the right of the
-search screen. ~Note in the test report whether a subset of the
+search screen. Â~Note in the test report whether a subset of the
 available columns is highlighted with a check mark, and if so which
 columns they are.
 
@@ -633,7 +633,7 @@ should be displayed in the ``tri-view'' - a coverage image on the upper
 left, a default X-Y plot on the upper right, and the tabular query
 result on the bottom.\\[2\baselineskip]Note that if the dataset is
 simulated, the coverage image may not correspond to the catalog data.
-~(It is not a requirement of DP0.1 for a coverage image for DESC DC2 to
+Â~(It is not a requirement of DP0.1 for a coverage image for DESC DC2 to
 be created or made available in the Portal Aspect.)
 
 }
@@ -649,8 +649,8 @@ Step 10 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Verify that the query result covers the expected region of sky, and that
-the expected set of columns is included in the query result. ~Record the
-number of rows returned by the query.\\[2\baselineskip]Record the
+the expected set of columns is included in the query result. Â~Record
+the number of rows returned by the query.\\[2\baselineskip]Record the
 identity displayed for the coverage image.
 
 }
@@ -731,7 +731,7 @@ Step 14 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Use the ``diskette'' icon in the table viewer toolbar to save the
-tabular query result as an attachment to the test record. ~Use the
+tabular query result as an attachment to the test record. Â~Use the
 VOTable ``TableData'' format.
 
 }
@@ -751,7 +751,7 @@ Step 15 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click on the `i'-in-a-circle button in the table viewer. ~Use the
+Click on the `i'-in-a-circle button in the table viewer. Â~Use the
 resulting dialog to record the URL for the query job result, and to
 download the XML file at that URL and save it as an attachment in the
 test record.
