@@ -33,7 +33,7 @@ jobs:
         run: |
           source ${CONDA}/bin/activate docsteady-env
           docsteady --namespace DM generate-tpr LVV-P79 DMTR-301.tex
-          sed -i '' 's/Â//g' DMTR-301.tex
+          sed -i 's/Â//g' DMTR-301.tex
           #this document gets odd chareters from marshmallow .. 
         shell: bash
  
