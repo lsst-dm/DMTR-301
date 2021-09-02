@@ -38,6 +38,8 @@ meta.tex: Makefile .FORCE
 
 generate: .FORCE
 	docsteady --namespace $(NAMESPACE) generate-tpr $(PLAN) $(DOCNAME).tex
+	sed -i '' 's/Â//g' $(DOCNAME).tex
+	# sed on mac requires the empty string ... 
 
 
 #Traditional acronyms are better in this document
