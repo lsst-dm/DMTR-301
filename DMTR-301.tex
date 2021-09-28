@@ -32,7 +32,7 @@
 \title{LDM-503-14a: RSP redeployed on the Interim Data Facility (IDF), ready
 for DP0.1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-09-27 }
+\date{ 2021-09-28 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -238,7 +238,8 @@ Not provided.
 
 \subsubsection{Test Cases in LVV-C166 Test Cycle}
 
-\paragraph{ LVV-T2171 - Notebook Aspect access to a DP0.1 dataset in the IDF-deployed RSP }\mbox{}\\
+\paragraph{ LVV-T2171 - LDM-503-14a: Notebook Aspect access to a DP0.1 dataset in the
+IDF-deployed RSP }\mbox{}\\
 
 Version \textbf{1}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2171}{\textit{ LVV-T2171 } }
@@ -266,6 +267,45 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+In the following step:
+
+\begin{enumerate}
+\tightlist
+\item
+  Note that the URL for the IDF-deployed RSP, provided as test data
+  here, is not the NCSA one in the included-by-reference test case
+  LVV-T837.
+\item
+  Please record the options for available releases presented when the
+  Notebook Aspect is starting up.
+\end{enumerate}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+https://data.lsst.cloud/
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Availability of a set of predefined releases is relevant to the
+verification of DMS-NB-REQ-0007 (Pre-installed Containerized Software
+Releases).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 Authenticate to the notebook aspect of the LSST Science Platform
 (NB-LSP). ~This is currently at
 https://lsst-lsp-stable.ncsa.illinois.edu/nb.
@@ -285,7 +325,7 @@ containerized stack version and machine flavor.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -309,37 +349,19 @@ container containing the correct stack version.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Use the file browser on the left of the JupyterLab UI to open the ``LSST
-Catalog Access Tutorial'' notebook.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
 Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Execute the notebook. ~Take note of any errors encountered along the
-way.
+Record the full URL including scheme of the Notebook Aspect interface in
+the browser.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+The URL should begin with ``https:''. ~This addresses requirement
+DMS-NB-REQ-0001 (Secure Protocol).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -350,6 +372,52 @@ way.
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
 Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the file browser on the left of the JupyterLab UI to open the ``LSST
+Catalog Access Tutorial'' notebook.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Execution of this notebook and the one in Step 5 provide test coverage
+for the ``notebook interface'' part of the requirement DMS-NB-REQ-0005
+(Interactive Python Environment).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute the notebook. ~Take note of any errors encountered along the
+way.\\[2\baselineskip]Record explicitly that API Aspect TAP queries were
+performed.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Access to the API Aspect's TAP service provides partial test coverage
+for DMS-NB-REQ-0017 ({Access to the API and Portal Aspects).}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -369,17 +437,27 @@ Use the file browser on the left of the JupyterLab UI to open the
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Execute the notebook. ~Take note of any errors encountered along the
-way.
+way.\\[2\baselineskip]Record explicitly the interaction with the Butler
+in this test notebook.\\[2\baselineskip]Record explicitly the use of
+afw.display and the observation of images being displayed using the
+Portal (Firefly) tools.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+Successful use of the Butler provides test coverage for DMS-NB-REQ-0009
+(Data Access Middleware Availability).\\[2\baselineskip]Availability of
+afw.display in the notebook and its use to visualize an image obtained
+from the Butler provides test coverage for DMS-NB-REQ-0032 (Image
+Visualization).\\[2\baselineskip]Successful use of the Portal for image
+visualization provides test coverage for DMS-NB-REQ-0030 (Access to
+Portal Visualization API).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -389,7 +467,7 @@ way.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -407,7 +485,8 @@ Log out of the Notebook Aspect.
 
 }
 
-\paragraph{ LVV-T2172 - Portal Aspect access to a DP0.1 dataset in the IDF-deployed RSP }\mbox{}\\
+\paragraph{ LVV-T2172 - LDM-503-14a: Portal Aspect access to a DP0.1 dataset in the IDF-deployed
+RSP }\mbox{}\\
 
 Version \textbf{1}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2172}{\textit{ LVV-T2172 } }
@@ -498,7 +577,8 @@ Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Ensure that the TAP service internal to the RSP instance is selected.
-~(This should be the default choice.)
+(This should be the default choice.)\\[2\baselineskip]Record the list of
+available table collections (``schemas'').
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -519,8 +599,9 @@ Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Select the TAP ``schema'' for the data to be queried (see test
-parameter). ~
+Select the TAP table collection / ``schema'' for the data to be queried
+(see test parameter).\\[2\baselineskip]Record the list of available
+tables in that schema.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -532,7 +613,10 @@ parameter). ~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-A list of tables in the selected schema should be displayed.
+A list of tables in the selected schema should be
+displayed.\\[2\baselineskip]The ability to query any table from the list
+of schemas and tables is intended to satisfy DMS-PRTL-REQ-0015 (Generic
+Query).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -546,7 +630,7 @@ Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Select the catalog table to be queried (see test parameter). ~
+Select the catalog table to be queried (see test parameter).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -558,7 +642,9 @@ Select the catalog table to be queried (see test parameter). ~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-A search interface for the selected table should be presented.
+A search interface for the selected table should be
+presented.\\[2\baselineskip]This interface is intended to satisfy
+DMS-PRTL-REQ-0016 (Generic Query - Form-Based).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -574,8 +660,9 @@ Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 {\footnotesize
 Enter the sky coordinates of the location to be tested (see test
 parameter) in the ``Spatial'' query-builder element on the left of the
-screen. ~(Note that the test dataset is likely to be of limited extent
-on the sky.) Enter 100 arcseconds as the search radius.
+screen.\\
+(Note that the test dataset is likely to be of limited extent on the
+sky.) Enter 100 arcseconds as the search radius.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -587,6 +674,9 @@ on the sky.) Enter 100 arcseconds as the search radius.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+The cone-search form query interface tested here is intended to satisfy
+DMS-PRTL-REQ-0020 (Positional Query: Position on the Sky) and
+DMS-PRTL-REQ-0026 (Positional Query by Region: Cone-Search).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -633,8 +723,13 @@ should be displayed in the ``tri-view'' - a coverage image on the upper
 left, a default X-Y plot on the upper right, and the tabular query
 result on the bottom.\\[2\baselineskip]Note that if the dataset is
 simulated, the coverage image may not correspond to the catalog data.
-~(It is not a requirement of DP0.1 for a coverage image for DESC DC2 to
-be created or made available in the Portal Aspect.)
+(It is not a requirement of DP0.1 for a coverage image for DESC DC2 to
+be created or made available in the Portal Aspect.)\\[2\baselineskip]The
+table viewer is intended to satisfy DMS-PRTL-REQ-0049 (Display of
+Tabular Data).\\[2\baselineskip]Overplotting of the table on the
+coverage image is intended to satisfy DMS-PRTL-REQ-0076 (Image Plot
+Overlays) and DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects
+on Images). ~Additional aspects of this are tested in subsequent steps.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -670,13 +765,17 @@ Step 11 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Verify that the X-Y plot can be modified to display a user-selected pair
-of columns.
+Verify that the set of columns displayed in the table can be modified
+using the Table Options dialog available from the ``gears'' button in
+the table toolbar.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+The ability to select a subset of the available columns for viewing is
+intended to satisfy DMS-PRTL-REQ-0050 (Column Selection of Tabular
+Data).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -690,13 +789,15 @@ Step 12 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Verify that highlighted rows in the table, points in the X-Y plot, and
-marks on the coverage image are connected.
+Verify that the table is displayed in a ``paged'' manner. ~Record the
+initial page size. ~Verify that the page size can be changed.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+The ability to display a paged view of a table is intended to satisfy
+DMS-PRTL-REQ-0054 (Paging of Tabular Data).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -710,13 +811,16 @@ Step 13 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Verify that selections made in the three panes of the tri-view are
-reflected in the other panes.
+Verify that the X-Y plot can be modified to display a user-selected pair
+of columns, using the plot options dialog available from the ``gears''
+button in the plot toolbar.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+The scatter plot facility is meant to satisfy DMS-PRTL-REQ-0055 (XY
+Scatter Plots).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -730,14 +834,16 @@ Step 14 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Use the ``diskette'' icon in the table viewer toolbar to save the
-tabular query result as an attachment to the test record. ~Use the
-VOTable ``TableData'' format.
+Verify that highlighted rows in the table, points in the X-Y plot, and
+marks on the coverage image are connected.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+The linkages between highlighted points in the three panes of the
+tri-view are intended to satisfy DMS-PRTL-REQ-0106 (Linked Tables,
+Plots, and Images).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -751,6 +857,60 @@ Step 15 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Verify that selections made in the three panes of the tri-view are
+reflected in the other panes.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The ability to perform linked selections graphically is intended to
+satisfy DMS-PRTL-REQ-0107 (Data Selection from a Plot or
+Image).\\[2\baselineskip]The ability to perform selections (by
+filtering) on a table satisfies DMS-PRTL-REQ-0090 (Simple Filtering of
+Tabular Data) and DMS-PRTL-REQ-0092 (Filtering of Tabular Data by
+Multiple Columns).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 16 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the ``diskette'' icon in the table viewer toolbar to save the
+tabular query result as an attachment to the test record. ~Use the
+VOTable ``TableData'' format, but record all the download format options
+presented.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+This capability partially satisfies (just for the Portal)
+DMS-LSP-REQ-0014 (Download Data).\\[2\baselineskip]VOTable and CSV
+should be supported for now. For full coverage of DMS-LSP-REQ-0017
+(Tabular Data Download File Formats), FITS must also be an
+option.\\[2\baselineskip]The ability to save a displayed table is
+intended to satisfy DMS-PRTL-REQ-0095 (Saving DIsplayed Tabular Data).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 17 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 Click on the `i'-in-a-circle button in the table viewer. ~Use the
 resulting dialog to record the URL for the query job result, and to
 download the XML file at that URL and save it as an attachment in the
@@ -760,6 +920,9 @@ test record.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+This capability provides a basic implementation of the Portal side of
+the requirement DMS-LSP-REQ-0010 (Transfer of Portal Data References to
+Notebook).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
