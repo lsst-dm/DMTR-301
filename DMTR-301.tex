@@ -32,7 +32,7 @@
 \title{LDM-503-14a: RSP redeployed on the Interim Data Facility (IDF), ready
 for DP0.1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-09-28 }
+\date{ 2021-10-04 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -117,7 +117,23 @@ The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jsp
 \subsection{Related Documentation}
 
 
-No additional documentation provided.
+\begin{longtable}{rp{10cm}l}
+\multicolumn{3}{c}{Jira Attachments} \\ \hline
+ To LVV-C166 results &
+  ScreenShot2021-10-01at08.09.52.png & \attachfile{attachments/ScreenShot2021-10-01at08.09.52.png}\\ \hline
+ To LVV-C166 results &
+  ScreenShot2021-10-01at08.06.45.png & \attachfile{attachments/ScreenShot2021-10-01at08.06.45.png}\\ \hline
+To LVV-C166 results &
+  LDM-503-14a-portal-plot.png & \attachfile{attachments/LDM-503-14a-portal-plot.png}\\ \hline
+To LVV-C166 results &
+  ScreenShot2021-10-01at07.33.59.png & \attachfile{attachments/ScreenShot2021-10-01at07.33.59.png}\\ \hline
+To LVV-C166 results &
+  xz1o60x1tpg1vvv6.xml & \attachfile{attachments/xz1o60x1tpg1vvv6.xml}\\ \hline
+   \end{longtable}
+
+All documents provided as attachments in Jira are downloaded to Github and linked here for convenience.
+However, since they are not properly versioned, they should be considered informal and therefore
+not be part of the verification baseline.
 
 
 \subsection{PMCS Activity}
@@ -145,7 +161,7 @@ Gregory Dubois-Felsmann }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2171}{LVV-T2171}
-& {\small Gregory Dubois-Felsmann } & {\small  } &
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small Someone with credentials allowing access to the instance of the RSP at
@@ -154,7 +170,7 @@ the IDF on which the data are deployed. }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2172}{LVV-T2172}
-& {\small Gregory Dubois-Felsmann } & {\small  } &
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -179,26 +195,163 @@ the IDF on which the data are deployed. }
 \multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-14a: RSP redeployed on the Interim Data Facility (IDF), ready
 for DP0.1 }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C166}{LVV-C166}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-14a: Test RSP capabilities on IDF for DP0.1 readiness }} & Not Executed \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-14a: Test RSP capabilities on IDF for DP0.1 readiness }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2171}{LVV-T2171}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
+Of the requirements covered by this test case, the following should be
+regarded as substantively verified:
 
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0007 (Pre-installed Containerized Software Releases)
+\item
+  DMS-NB-REQ-0017 (Access to the API and Portal Aspects) - This test
+  demonstrates that the connections can be made conveniently to the
+  other Aspects (to TAP and to Firefly image visualization,
+  respectively), and that is sufficient to verify the requirement. ~The
+  details of what services are then usable is a matter for the
+  requirements on those services themselves.
+\item
+  DMS-NB-REQ-0030 (Access to Portal Visualization API)
+\item
+  DMS-NB-REQ-0032 (Image Visualization)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Verified as far as its use via Portal APIs from the Notebook Aspect is
+  concerned.
+\end{itemize}
+
+The remainder should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0001 (Secure Protocol) - Additional tests should more
+  directly verify that the Notebook Aspect is \emph{consistently} using
+  secure connections
+\item
+  DMS-NB-REQ-0005 (Interactive Python Environment) - A further test
+  should verify that a Python shell is available in addition to the
+  notebook interface
+\item
+  DMS-NB-REQ-0009 (Data Access Middleware Availability) - A further test
+  should verify the usability of the Butler to \emph{write} output
+  datasets in the Notebook Aspect
+\end{itemize}
 \medskip
 \end{minipage}
-&   \\\hline
+&   \href{https://jira.lsstcorp.org/browse/DM-32003}{DM-32003}
+\href{https://jira.lsstcorp.org/browse/DM-32004}{DM-32004}
+\href{https://jira.lsstcorp.org/browse/DM-32003}{DM-32003}
+\href{https://jira.lsstcorp.org/browse/DM-32004}{DM-32004}
+\\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2172}{LVV-T2172}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
+Portal version 2.3.3, executed on Safari 14.1.2 from a Mac on the public
+Internet, no VPN.\\[2\baselineskip]Of the requirements covered by this
+test case, the following should be regarded as substantively verified:
 
+\begin{itemize}
+\tightlist
+\item
+  DMS-PRTL-REQ-0015 (Generic Query)
+\item
+  DMS-PRTL-REQ-0016 (Generic Query - Form Based)
+\item
+  DMS-PRTL-REQ-0020 (Positional Query: Position on the Sky) - NB: Since
+  only equatorial coordinates were tested, the related
+  DMS-PRTL-REQ-0022, which is about the range of coordinate systems
+  accepted, was not verified.
+\item
+  DMS-PRTL-REQ-0026 (Positional Query by Region: Cone-Search)
+\item
+  DMS-PRTL-REQ-0049 (Display of Tabular Data)
+\item
+  DMS-PRTL-REQ-0050 (Column Selection of Tabular Data)
+\item
+  DMS-PRTL-REQ-0054 (Paging of Tabular Data)
+\item
+  DMS-PRTL-REQ-0055 (XY Scatter Plots)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Also covered by LVV-T2171 in this same test cycle.
+\item
+  DMS-PRTL-REQ-0106 (Linked Tables, Plots, and Images)
+\end{itemize}
+
+The following should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0010 (Transfer of Portal Data References to Notebook) -
+  Only the Portal side of this was covered by this test case. ~However,
+  note that the tests done under LDM-503-10a (test cycle LVV-C85)
+  already provided a more comprehensive verification of this
+  requirement.
+\item
+  DMS-LSP-REQ-0014 (Download Data) - Only verified as far as downloading
+  a tabular data result from the Portal Aspect is concerned.
+  ~Downloading data from the Notebook Aspect should also be checked, and
+  downloading data, regardless of Aspect, from the User File Workspace
+  and User Database Workspace, should also be checked.
+\item
+  DMS-PRTL-REQ-0076 (Image Plot Overlays) - Verified for astrophysical
+  coordinates in both direct Portal usage and in
+  Portal-used-from-Notebook visualization. ~Not verified for pixel
+  coordinates in pure Portal usage. ~Demonstrated via afw.display for
+  pixel coordinates in Portal-used-from-Notebook visualization.
+\item
+  DMS-PRTL-REQ-0090 (Simple Filtering of Tabular Data) - Partially
+  covered by the basic tests done, but should be subjected to a test
+  more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0092 (Filtering of Tabular Data by Multiple Columns) -
+  Partially covered by the basic tests done, but should be subjected to
+  a test more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0095 (Saving Displayed Tabular Data) - Partially covered
+  by this test case. ~More comprehensively covered previously by
+  LDM-503-10a (LVV-C85) and ready for review based on that.
+\item
+  DMS-PRTL-REQ-0107 (Data Selection from a Plot or Image) - Verified but
+  only for rectangular selections, not arbitrary polygons.
+\end{itemize}
+
+The following requirements were not found to be fully satisfied by this
+test case at this time, and will need re-verification at a future
+date:\\
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0017 (Tabular Data Download File Formats) - Only checked
+  against Portal Aspect table downloads; in this usage, no option for
+  FITS binary table download was presented (except as the payload of a
+  VOTable with FITS as its internal format). ~Not checked for direct API
+  Aspect (i.e., TAP) access.
+\end{itemize}
 \medskip
 \end{minipage}
-&   \\\hline
+&   \href{https://jira.lsstcorp.org/browse/DM-31999}{DM-31999}
+\href{https://jira.lsstcorp.org/browse/DM-32000}{DM-32000}
+\href{https://jira.lsstcorp.org/browse/DM-32001}{DM-32001}
+\href{https://jira.lsstcorp.org/browse/DM-31999}{DM-31999}
+\href{https://jira.lsstcorp.org/browse/DM-32000}{DM-32000}
+\href{https://jira.lsstcorp.org/browse/DM-32001}{DM-32001}
+\\\hline
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
@@ -223,7 +376,7 @@ Not yet available.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C166}{LDM-503-14a: Test RSP capabilities on IDF for DP0.1 readiness}} in Jira.
 
 Test Cycle name: LDM-503-14a: Test RSP capabilities on IDF for DP0.1 readiness\\
-Status: Not Executed
+Status: Done
 
 This test cycle contains the tests necessary to verify the readiness of
 the RSP as redeployed on the IDF to meet the needs of the DP0.1
@@ -254,16 +407,66 @@ Creation of the DP0.1 dataset or a stand-in, in the form of a Butler
 repository accessible from the Notebook Aspect and with associated
 catalog data in a TAP service in the same RSP instance at the IDF.
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Of the requirements covered by this test case, the following should be
+regarded as substantively verified:
 
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0007 (Pre-installed Containerized Software Releases)
+\item
+  DMS-NB-REQ-0017 (Access to the API and Portal Aspects) - This test
+  demonstrates that the connections can be made conveniently to the
+  other Aspects (to TAP and to Firefly image visualization,
+  respectively), and that is sufficient to verify the requirement. ~The
+  details of what services are then usable is a matter for the
+  requirements on those services themselves.
+\item
+  DMS-NB-REQ-0030 (Access to Portal Visualization API)
+\item
+  DMS-NB-REQ-0032 (Image Visualization)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Verified as far as its use via Portal APIs from the Notebook Aspect is
+  concerned.
+\end{itemize}
+
+The remainder should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0001 (Secure Protocol) - Additional tests should more
+  directly verify that the Notebook Aspect is \emph{consistently} using
+  secure connections
+\item
+  DMS-NB-REQ-0005 (Interactive Python Environment) - A further test
+  should verify that a Python shell is available in addition to the
+  notebook interface
+\item
+  DMS-NB-REQ-0009 (Data Access Middleware Availability) - A further test
+  should verify the usability of the Butler to \emph{write} output
+  datasets in the Notebook Aspect
+\end{itemize}
+
+Issues found during the execution of LVV-T2171 test case:
+
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-32003}{DM-32003}~~Document that using Step numbers in test cases can be misleading
+
+\item \href{https://jira.lsstcorp.org/browse/DM-32004}{DM-32004}~~Firefly ``slate'' in JupyterLab positions uploaded table off-screen
+
+\end{itemize}
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -302,7 +505,7 @@ Releases).
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -321,11 +524,12 @@ containerized stack version and machine flavor.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Authenticated to data.lsst.cloud using GitHub credentials.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -345,11 +549,13 @@ container containing the correct stack version.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Used ``Recommended (Weekly 2021\_33)''. ~Other available versions in
+attached image.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -367,11 +573,12 @@ DMS-NB-REQ-0001 (Secure Protocol).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+``https://data.lsst.cloud/nb/user/gpdf/lab?''
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -390,11 +597,25 @@ for the ``notebook interface'' part of the requirement DMS-NB-REQ-0005
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Note error in instructions - the correct notebook is
+``DC2\_catalog\_access'', from the system-test directory, modified for
+the DC2 dataset. ~\\[2\baselineskip]Note that the reference to ``Step
+5'' above is to a step in the as-written script, but in the
+as-displayed-in-test-runner script, it's Step 7 because of the expansion
+of a nested test case.
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-32003}{DM-32003}~~Document that using Step numbers in test cases can be misleading
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 6 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -413,11 +634,24 @@ for DMS-NB-REQ-0017 ({Access to the API and Portal Aspects).}
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+In cell 1's output, the text\\
+
+\begin{verbatim}
+Patching auth into notebook.base.handlers.IPythonHandler(notebook.base.handlers.AuthenticatedHandler) -> IPythonHandler(jupyterhub.singleuser.mixins.HubAuthenticatedHandler, notebook.base.handlers.AuthenticatedHandler
+\end{verbatim}
+
+is shown with a red background as if it were an error, but it is a
+normal part of the operation of the code.\\[2\baselineskip]The expected
+schemas, including ``dp01\_dc2\_catalogs'', are shown in cells 2 and
+3.\\
+The five expected DP0.1 tables are shown in cell 4.\\
+The cone and polygon searches were successful.\\
+The async search was successful. ~Full pass.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 7 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -433,11 +667,12 @@ Use the file browser on the left of the JupyterLab UI to open the
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Opened as expected.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 8 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -463,11 +698,34 @@ Portal Visualization API).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The Butler provided two test images' dataIds, and the retrieval of the
+selected one was successful.\\
+afw.display was used to produce an image display in the Firefly
+extension.\\
+Masks were successfully displayed and the Firefly mask menu matched the
+output in the notebook.\\
+afw.display was successfully used to overlay catalog data on the
+image.\\
+Separately, firefly\_client was successfully used to overlay a browsable
+table on the image and create a plot.\\
+The known problem with the initial positioning of the table in the
+Firefly extension window (cell 19 of the test) was observed. ~This is
+not sufficiently severe to merit a ``pass with deviation'', as this use
+of the Firefly API is beyond the requirements coverage of this test, but
+it has been reported as a ticket and will be addressed.
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-32004}{DM-32004}~~Firefly ``slate'' in JupyterLab positions uploaded table off-screen
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 9 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -501,16 +759,111 @@ Creation of the DP0.1 dataset or a stand-in, and service of the
 associated catalog data and schema in a TAP service in the same RSP
 instance at the IDF.
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Portal version 2.3.3, executed on Safari 14.1.2 from a Mac on the public
+Internet, no VPN.\\[2\baselineskip]Of the requirements covered by this
+test case, the following should be regarded as substantively verified:
 
+\begin{itemize}
+\tightlist
+\item
+  DMS-PRTL-REQ-0015 (Generic Query)
+\item
+  DMS-PRTL-REQ-0016 (Generic Query - Form Based)
+\item
+  DMS-PRTL-REQ-0020 (Positional Query: Position on the Sky) - NB: Since
+  only equatorial coordinates were tested, the related
+  DMS-PRTL-REQ-0022, which is about the range of coordinate systems
+  accepted, was not verified.
+\item
+  DMS-PRTL-REQ-0026 (Positional Query by Region: Cone-Search)
+\item
+  DMS-PRTL-REQ-0049 (Display of Tabular Data)
+\item
+  DMS-PRTL-REQ-0050 (Column Selection of Tabular Data)
+\item
+  DMS-PRTL-REQ-0054 (Paging of Tabular Data)
+\item
+  DMS-PRTL-REQ-0055 (XY Scatter Plots)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Also covered by LVV-T2171 in this same test cycle.
+\item
+  DMS-PRTL-REQ-0106 (Linked Tables, Plots, and Images)
+\end{itemize}
+
+The following should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0010 (Transfer of Portal Data References to Notebook) -
+  Only the Portal side of this was covered by this test case. ~However,
+  note that the tests done under LDM-503-10a (test cycle LVV-C85)
+  already provided a more comprehensive verification of this
+  requirement.
+\item
+  DMS-LSP-REQ-0014 (Download Data) - Only verified as far as downloading
+  a tabular data result from the Portal Aspect is concerned.
+  ~Downloading data from the Notebook Aspect should also be checked, and
+  downloading data, regardless of Aspect, from the User File Workspace
+  and User Database Workspace, should also be checked.
+\item
+  DMS-PRTL-REQ-0076 (Image Plot Overlays) - Verified for astrophysical
+  coordinates in both direct Portal usage and in
+  Portal-used-from-Notebook visualization. ~Not verified for pixel
+  coordinates in pure Portal usage. ~Demonstrated via afw.display for
+  pixel coordinates in Portal-used-from-Notebook visualization.
+\item
+  DMS-PRTL-REQ-0090 (Simple Filtering of Tabular Data) - Partially
+  covered by the basic tests done, but should be subjected to a test
+  more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0092 (Filtering of Tabular Data by Multiple Columns) -
+  Partially covered by the basic tests done, but should be subjected to
+  a test more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0095 (Saving Displayed Tabular Data) - Partially covered
+  by this test case. ~More comprehensively covered previously by
+  LDM-503-10a (LVV-C85) and ready for review based on that.
+\item
+  DMS-PRTL-REQ-0107 (Data Selection from a Plot or Image) - Verified but
+  only for rectangular selections, not arbitrary polygons.
+\end{itemize}
+
+The following requirements were not found to be fully satisfied by this
+test case at this time, and will need re-verification at a future
+date:\\
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0017 (Tabular Data Download File Formats) - Only checked
+  against Portal Aspect table downloads; in this usage, no option for
+  FITS binary table download was presented (except as the payload of a
+  VOTable with FITS as its internal format). ~Not checked for direct API
+  Aspect (i.e., TAP) access.
+\end{itemize}
+
+Issues found during the execution of LVV-T2172 test case:
+
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-31999}{DM-31999}~~Fix nested utility test cases with explicit references to the NCSA RSP
+
+\item \href{https://jira.lsstcorp.org/browse/DM-32000}{DM-32000}~~Firefly: incorrect double-click for negative floating-point numbers
+
+\item \href{https://jira.lsstcorp.org/browse/DM-32001}{DM-32001}~~Investigate VOTable output format versions available in Firefly
+
+\end{itemize}
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -528,11 +881,21 @@ A credential-entry screen should be displayed.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Used https://data.lsst.cloud for this - the NCSA URL was in a old nested
+test case used for this test without realizing the address was embedded.
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-31999}{DM-31999}~~Fix nested utility test cases with explicit references to the NCSA RSP
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -549,11 +912,12 @@ The Portal Aspect UI should be displayed following authentication.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Used the tester's GitHub credentials for IDF login.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -568,11 +932,12 @@ Navigate to the TAP Search screen
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+TAP search remains the default screen.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -591,11 +956,38 @@ along with a list of tables in the default schema.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+RSP-internal TAP service was indeed the default
+(https://data.lsst.cloud/api/tap).\\
+Schemas:
+
+\begin{itemize}
+\tightlist
+\item
+  dp01\_dc2\_catalogs (default selection), with tables:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    object (default selection)
+  \item
+    truth\_match
+  \item
+    position
+  \item
+    reference
+  \item
+    forced\_photometry
+  \end{itemize}
+\item
+  tap\_schema
+\item
+  uws
+\end{itemize}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -622,11 +1014,15 @@ Query).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+As an experiment, was able to switch to tap\_schema schema and see the
+standard five tables.\\
+Switched back to the required schema and saw the same tables noted in
+step 4 above.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 6 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -650,11 +1046,16 @@ DMS-PRTL-REQ-0016 (Generic Query - Form-Based).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+``object'' selected.\\
+``Spatial'' query form displayed unchecked but expanded (correct);
+``Temporal'' unexpanded (correct).\\
+Column-selection-and-constraint form displayed with a subset of columns
+preselected, as expected.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 7 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -682,11 +1083,15 @@ DMS-PRTL-REQ-0026 (Positional Query by Region: Cone-Search).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Coordinate-selection box help changed as expected to show the
+sexagesimal equivalent of the coordinates entered.\\
+``Spatial'' selector checkbox automatically selected once valid
+coordinates entered, as expected.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 8 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -704,11 +1109,39 @@ columns they are.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Column list with units and descriptions displayed.\\
+``objectId'', ``parentObjectId'', ``ra'', and ``dec'' displayed at the
+top and selected. Remainder of columns in alphabetical order.\\
+Following subset checked:
+
+\begin{itemize}
+\tightlist
+\item
+  blendedness
+\item
+  clean
+\item
+  cModelFlux\_flag\_*
+\item
+  extendedness
+\item
+  good
+\item
+  mag\_*\_cModel
+\item
+  magerr\_*\_cModel
+\item
+  patch
+\item
+  snr\_*\_cModel
+\item
+  tract
+\end{itemize}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 9 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -735,11 +1168,13 @@ on Images). ~Additional aspects of this are tested in subsequent steps.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Tri-view displayed as expected. ~Default plot is ra (x-axis, reversed)
+versus dec (y-axis).
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 10 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 10 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -757,11 +1192,28 @@ identity displayed for the coverage image.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+1,158 rows in query result.\\
+Table columns displayed correspond to checkboxes in step 8.\\
+``2MASS K\_s'' atlas image cutout used for coverage. Switching to
+``HiPS'' displays a 2MASS 3-color image.\\
+Table data and image and plot coordinate display confirm the expected
+circular search region.\\
+Min/max ra, dec: 59.9904647/60.0335178 , -35.0275985/-34.9723076
+(obtained via sorting table)\\
+Distance-measuring tool confirms \textasciitilde{}200 arcsec diameter.
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-32000}{DM-32000}~~Firefly: incorrect double-click for negative floating-point numbers
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 11 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 11 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -781,11 +1233,14 @@ Data).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Used dialog to select (via column filter) all ``flag'' columns in the
+dialog, and uncheck them in bulk. ~Verified that they disappeared from
+the displayed table.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 12 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 12 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -803,11 +1258,15 @@ DMS-PRTL-REQ-0054 (Paging of Tabular Data).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Displayed with initial page size of 100. ~Page size changed to 500
+(three pages) and 1500 (displaying table all at once) with the expected
+results. ~No discernable change in table performance with the increased
+size.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 13 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 13 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -826,11 +1285,13 @@ Scatter Plots).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Verified ability to create a plot of (mag\_r\_cModel - mag\_i\_cModel)
+versus mag\_r\_cModel.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 14 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 14 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -849,11 +1310,13 @@ Plots, and Images).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Verified that clicking on points/rows in each view highlighted
+corresponding points/rows in the other views.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 15 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 15 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -875,11 +1338,16 @@ Multiple Columns).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Verified that rectangular selections in the image and/or plot
+transferred to checkbox selections in the table after clicking on the
+``checkmark'' icon.\\
+Verified that checkbox selections in the table were reflected by
+(yellow) highlights in the image and plot.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 16 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 16 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -903,11 +1371,22 @@ intended to satisfy DMS-PRTL-REQ-0095 (Saving DIsplayed Tabular Data).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Verified table saved as VOTable 1.2. ~Options presented shown in image,
+and are: IPAC table, CSV, TSV, VOTable-TABLEDATA, VOTable-BINARY2, and
+VOTable-FITS.
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-32001}{DM-32001}~~Investigate VOTable output format versions available in Firefly
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 17 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 17 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -928,6 +1407,26 @@ Notebook).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Job URL:
+https://data.lsst.cloud/api/tap/async/xz1o60x1tpg1vvv6\\[2\baselineskip]Query
+text is reflected in the XML:\\[2\baselineskip]
+
+\begin{itemize}
+\tightlist
+\item
+  SELECT
+  objectId,parentObjectId,ra,dec,blendedness,clean,cModelFlux\_flag\_g,cModelFlux\_flag\_i
+  ~ ~
+  ,cModelFlux\_flag\_r,cModelFlux\_flag\_u,cModelFlux\_flag\_y,cModelFlux\_flag\_z,extendedness,good
+  ~ ~
+  ,mag\_g\_cModel,mag\_i\_cModel,mag\_r\_cModel,mag\_u\_cModel,mag\_y\_cModel,mag\_z\_cModel,magerr\_g\_cModel
+  ~ ~
+  ,magerr\_i\_cModel,magerr\_r\_cModel,magerr\_u\_cModel,magerr\_y\_cModel,magerr\_z\_cModel,patch
+  ~ ~
+  ,snr\_g\_cModel,snr\_i\_cModel,snr\_r\_cModel,snr\_u\_cModel,snr\_y\_cModel,snr\_z\_cModel,tract
+  ~FROM dp01\_dc2\_catalogs.object ~WHERE CONTAINS(POINT('ICRS', ra,
+  dec),CIRCLE('ICRS', 60, -35, 0.027777777777777776))=1
+\end{itemize}
 
 }
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uws:job xmlns:uws="http://www.ivoa.net/xml/UWS/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <uws:jobId>xz1o60x1tpg1vvv6</uws:jobId>
+  <uws:runId />
+  <uws:ownerId>CN=gpdf</uws:ownerId>
+  <uws:phase>COMPLETED</uws:phase>
+  <uws:quote>2021-10-02T14:27:41.175</uws:quote>
+  <uws:creationTime>2021-10-01T14:27:41.175</uws:creationTime>
+  <uws:startTime>2021-10-01T14:27:46.261</uws:startTime>
+  <uws:endTime>2021-10-01T14:27:46.973</uws:endTime>
+  <uws:executionDuration>14400</uws:executionDuration>
+  <uws:destruction>2021-10-08T14:27:41.175</uws:destruction>
+  <uws:parameters>
+    <uws:parameter id="LANG">ADQL</uws:parameter>
+    <uws:parameter id="MAXREC">50000</uws:parameter>
+    <uws:parameter id="QUERY">SELECT objectId,parentObjectId,ra,dec,blendedness,clean,cModelFlux_flag_g,cModelFlux_flag_i     ,cModelFlux_flag_r,cModelFlux_flag_u,cModelFlux_flag_y,cModelFlux_flag_z,extendedness,good     ,mag_g_cModel,mag_i_cModel,mag_r_cModel,mag_u_cModel,mag_y_cModel,mag_z_cModel,magerr_g_cModel     ,magerr_i_cModel,magerr_r_cModel,magerr_u_cModel,magerr_y_cModel,magerr_z_cModel,patch     ,snr_g_cModel,snr_i_cModel,snr_r_cModel,snr_u_cModel,snr_y_cModel,snr_z_cModel,tract  FROM dp01_dc2_catalogs.object  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 60, -35, 0.027777777777777776))=1</uws:parameter>
+    <uws:parameter id="request">doQuery</uws:parameter>
+  </uws:parameters>
+  <uws:results>
+    <uws:result id="diag" xlink:href="uws:executing:1" />
+    <uws:result id="diag" xlink:href="jndi:lookup:0" />
+    <uws:result id="diag" xlink:href="read:tap_schema:7" />
+    <uws:result id="diag" xlink:href="query:parse:4" />
+    <uws:result id="diag" xlink:href="jndi:connect:0" />
+    <uws:result id="diag" xlink:href="query:execute:224" />
+    <uws:result id="diag" xlink:href="query:store:476" />
+    <uws:result id="rowcount" xlink:href="final:1158" />
+    <uws:result id="result" xlink:href="http://async-results.lsst.codes/result_xz1o60x1tpg1vvv6.xml" />
+  </uws:results>
+</uws:job>
