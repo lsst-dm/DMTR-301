@@ -32,7 +32,7 @@
 \title{LDM-503-14a: RSP redeployed on the Interim Data Facility (IDF), ready
 for DP0.1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-10-01 }
+\date{ 2021-10-04 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -202,7 +202,45 @@ for DP0.1 }} & Approved \\\hline
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
+Of the requirements covered by this test case, the following should be
+regarded as substantively verified:
 
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0007 (Pre-installed Containerized Software Releases)
+\item
+  DMS-NB-REQ-0017 (Access to the API and Portal Aspects) - This test
+  demonstrates that the connections can be made conveniently to the
+  other Aspects (to TAP and to Firefly image visualization,
+  respectively), and that is sufficient to verify the requirement. ~The
+  details of what services are then usable is a matter for the
+  requirements on those services themselves.
+\item
+  DMS-NB-REQ-0030 (Access to Portal Visualization API)
+\item
+  DMS-NB-REQ-0032 (Image Visualization)
+\end{itemize}
+
+The remainder should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0001 (Secure Protocol) - Additional tests should more
+  directly verify that the Notebook Aspect is \emph{consistently} using
+  secure connections
+\item
+  DMS-NB-REQ-0005 (Interactive Python Environment) - A further test
+  should verify that a Python shell is available in addition to the
+  notebook interface
+\item
+  DMS-NB-REQ-0009 (Data Access Middleware Availability) - A further test
+  should verify the usability of the Butler to \emph{write} output
+  datasets in the Notebook Aspect
+\end{itemize}
 \medskip
 \end{minipage}
 &   \href{https://jira.lsstcorp.org/browse/DM-32003}{DM-32003}
@@ -283,7 +321,45 @@ catalog data in a TAP service in the same RSP instance at the IDF.
 
 Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Of the requirements covered by this test case, the following should be
+regarded as substantively verified:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0007 (Pre-installed Containerized Software Releases)
+\item
+  DMS-NB-REQ-0017 (Access to the API and Portal Aspects) - This test
+  demonstrates that the connections can be made conveniently to the
+  other Aspects (to TAP and to Firefly image visualization,
+  respectively), and that is sufficient to verify the requirement. ~The
+  details of what services are then usable is a matter for the
+  requirements on those services themselves.
+\item
+  DMS-NB-REQ-0030 (Access to Portal Visualization API)
+\item
+  DMS-NB-REQ-0032 (Image Visualization)
+\end{itemize}
+
+The remainder should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-NB-REQ-0001 (Secure Protocol) - Additional tests should more
+  directly verify that the Notebook Aspect is \emph{consistently} using
+  secure connections
+\item
+  DMS-NB-REQ-0005 (Interactive Python Environment) - A further test
+  should verify that a Python shell is available in addition to the
+  notebook interface
+\item
+  DMS-NB-REQ-0009 (Data Access Middleware Availability) - A further test
+  should verify the usability of the Butler to \emph{write} output
+  datasets in the Notebook Aspect
+\end{itemize}
 
 Issues found during the execution of LVV-T2171 test case:
 
