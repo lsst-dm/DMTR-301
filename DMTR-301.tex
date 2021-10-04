@@ -220,6 +220,10 @@ regarded as substantively verified:
   DMS-NB-REQ-0030 (Access to Portal Visualization API)
 \item
   DMS-NB-REQ-0032 (Image Visualization)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Verified as far as its use via Portal APIs from the Notebook Aspect is
+  concerned.
 \end{itemize}
 
 The remainder should be regarded as partially verified, successfully as
@@ -254,7 +258,91 @@ testing:
 \begin{minipage}[]{9cm}
 \smallskip
 Portal version 2.3.3, executed on Safari 14.1.2 from a Mac on the public
-Internet, no VPN.
+Internet, no VPN.\\[2\baselineskip]Of the requirements covered by this
+test case, the following should be regarded as substantively verified:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-PRTL-REQ-0015 (Generic Query)
+\item
+  DMS-PRTL-REQ-0016 (Generic Query - Form Based)
+\item
+  DMS-PRTL-REQ-0020 (Positional Query: Position on the Sky) - NB: Since
+  only equatorial coordinates were tested, the related
+  DMS-PRTL-REQ-0022, which is about the range of coordinate systems
+  accepted, was not verified.
+\item
+  DMS-PRTL-REQ-0026 (Positional Query by Region: Cone-Search)
+\item
+  DMS-PRTL-REQ-0049 (Display of Tabular Data)
+\item
+  DMS-PRTL-REQ-0050 (Column Selection of Tabular Data)
+\item
+  DMS-PRTL-REQ-0054 (Paging of Tabular Data)
+\item
+  DMS-PRTL-REQ-0055 (XY Scatter Plots)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Also covered by LVV-T2171 in this same test cycle.
+\item
+  DMS-PRTL-REQ-0106 (Linked Tables, Plots, and Images)
+\end{itemize}
+
+The following should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0010 (Transfer of Portal Data References to Notebook) -
+  Only the Portal side of this was covered by this test case. ~However,
+  note that the tests done under LDM-503-10a (test cycle LVV-C85)
+  already provided a more comprehensive verification of this
+  requirement.
+\item
+  DMS-LSP-REQ-0014 (Download Data) - Only verified as far as downloading
+  a tabular data result from the Portal Aspect is concerned.
+  ~Downloading data from the Notebook Aspect should also be checked, and
+  downloading data, regardless of Aspect, from the User File Workspace
+  and User Database Workspace, should also be checked.
+\item
+  DMS-PRTL-REQ-0076 (Image Plot Overlays) - Verified for astrophysical
+  coordinates in both direct Portal usage and in
+  Portal-used-from-Notebook visualization. ~Not verified for pixel
+  coordinates in pure Portal usage. ~Demonstrated via afw.display for
+  pixel coordinates in Portal-used-from-Notebook visualization.
+\item
+  DMS-PRTL-REQ-0090 (Simple Filtering of Tabular Data) - Partially
+  covered by the basic tests done, but should be subjected to a test
+  more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0092 (Filtering of Tabular Data by Multiple Columns) -
+  Partially covered by the basic tests done, but should be subjected to
+  a test more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0095 (Saving Displayed Tabular Data) - Partially covered
+  by this test case. ~More comprehensively covered previously by
+  LDM-503-10a (LVV-C85) and ready for review based on that.
+\item
+  DMS-PRTL-REQ-0107 (Data Selection from a Plot or Image) - Verified but
+  only for rectangular selections, not arbitrary polygons.
+\end{itemize}
+
+The following requirements were not found to be fully satisfied by this
+test case at this time, and will need re-verification at a future
+date:\\
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0017 (Tabular Data Download File Formats) - Only checked
+  against Portal Aspect table downloads; in this usage, no option for
+  FITS binary table download was presented (except as the payload of a
+  VOTable with FITS as its internal format). ~Not checked for direct API
+  Aspect (i.e., TAP) access.
+\end{itemize}
 \medskip
 \end{minipage}
 &   \href{https://jira.lsstcorp.org/browse/DM-31999}{DM-31999}
@@ -339,6 +427,10 @@ regarded as substantively verified:
   DMS-NB-REQ-0030 (Access to Portal Visualization API)
 \item
   DMS-NB-REQ-0032 (Image Visualization)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Verified as far as its use via Portal APIs from the Notebook Aspect is
+  concerned.
 \end{itemize}
 
 The remainder should be regarded as partially verified, successfully as
@@ -670,7 +762,91 @@ instance at the IDF.
 Execution status: {\bf Pass }
 
 Final comment:\\Portal version 2.3.3, executed on Safari 14.1.2 from a Mac on the public
-Internet, no VPN.
+Internet, no VPN.\\[2\baselineskip]Of the requirements covered by this
+test case, the following should be regarded as substantively verified:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-PRTL-REQ-0015 (Generic Query)
+\item
+  DMS-PRTL-REQ-0016 (Generic Query - Form Based)
+\item
+  DMS-PRTL-REQ-0020 (Positional Query: Position on the Sky) - NB: Since
+  only equatorial coordinates were tested, the related
+  DMS-PRTL-REQ-0022, which is about the range of coordinate systems
+  accepted, was not verified.
+\item
+  DMS-PRTL-REQ-0026 (Positional Query by Region: Cone-Search)
+\item
+  DMS-PRTL-REQ-0049 (Display of Tabular Data)
+\item
+  DMS-PRTL-REQ-0050 (Column Selection of Tabular Data)
+\item
+  DMS-PRTL-REQ-0054 (Paging of Tabular Data)
+\item
+  DMS-PRTL-REQ-0055 (XY Scatter Plots)
+\item
+  DMS-PRTL-REQ-0098 (Overlay Catalog of Sources and Objects on Images) -
+  Also covered by LVV-T2171 in this same test cycle.
+\item
+  DMS-PRTL-REQ-0106 (Linked Tables, Plots, and Images)
+\end{itemize}
+
+The following should be regarded as partially verified, successfully as
+far as this test could determine, but still needing more comprehensive
+testing:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0010 (Transfer of Portal Data References to Notebook) -
+  Only the Portal side of this was covered by this test case. ~However,
+  note that the tests done under LDM-503-10a (test cycle LVV-C85)
+  already provided a more comprehensive verification of this
+  requirement.
+\item
+  DMS-LSP-REQ-0014 (Download Data) - Only verified as far as downloading
+  a tabular data result from the Portal Aspect is concerned.
+  ~Downloading data from the Notebook Aspect should also be checked, and
+  downloading data, regardless of Aspect, from the User File Workspace
+  and User Database Workspace, should also be checked.
+\item
+  DMS-PRTL-REQ-0076 (Image Plot Overlays) - Verified for astrophysical
+  coordinates in both direct Portal usage and in
+  Portal-used-from-Notebook visualization. ~Not verified for pixel
+  coordinates in pure Portal usage. ~Demonstrated via afw.display for
+  pixel coordinates in Portal-used-from-Notebook visualization.
+\item
+  DMS-PRTL-REQ-0090 (Simple Filtering of Tabular Data) - Partially
+  covered by the basic tests done, but should be subjected to a test
+  more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0092 (Filtering of Tabular Data by Multiple Columns) -
+  Partially covered by the basic tests done, but should be subjected to
+  a test more focused on this particular behavior.
+\item
+  DMS-PRTL-REQ-0095 (Saving Displayed Tabular Data) - Partially covered
+  by this test case. ~More comprehensively covered previously by
+  LDM-503-10a (LVV-C85) and ready for review based on that.
+\item
+  DMS-PRTL-REQ-0107 (Data Selection from a Plot or Image) - Verified but
+  only for rectangular selections, not arbitrary polygons.
+\end{itemize}
+
+The following requirements were not found to be fully satisfied by this
+test case at this time, and will need re-verification at a future
+date:\\
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0017 (Tabular Data Download File Formats) - Only checked
+  against Portal Aspect table downloads; in this usage, no option for
+  FITS binary table download was presented (except as the payload of a
+  VOTable with FITS as its internal format). ~Not checked for direct API
+  Aspect (i.e., TAP) access.
+\end{itemize}
 
 Issues found during the execution of LVV-T2172 test case:
 
